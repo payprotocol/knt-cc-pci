@@ -18,14 +18,14 @@ var token = map[string]string{
 }
 
 func mintableAmount(totalSupply *big.Int, balance *big.Int, amount *big.Int) (*big.Int, error) {
-	if amount.Sign() <= 0 {
+	if nil == amount || amount.Sign() <= 0 {
 		return nil, errors.New("invalid amount to mint")
 	}
 	return amount, nil
 }
 
 func burnableAmount(totalSupply *big.Int, balance *big.Int, amount *big.Int) (*big.Int, error) {
-	if amount.Sign() <= 0 {
+	if nil == amount || amount.Sign() <= 0 {
 		return nil, errors.New("invalid amount to burn")
 	}
 	return amount, nil
