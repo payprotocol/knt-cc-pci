@@ -9,12 +9,9 @@ import (
 
 var token = map[string]string{
 	"code":           "PCL",
-	"decimal":        "18",
-	"max_supply":     "100000000000",
-	"initial_supply": "20000000000",
-	// unnecessary fields
-	"description": "Pay Protocol powered by Key Inside",
-	"website":     "",
+	"decimal":        "2",
+	"max_supply":     "10000000000000", // 100 billion
+	"initial_supply": "200000000000",   // 2 million
 }
 
 func mintableAmount(totalSupply *big.Int, balance *big.Int, amount *big.Int) (*big.Int, error) {
