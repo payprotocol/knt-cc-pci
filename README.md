@@ -1,6 +1,6 @@
 # Payprotocol Token Chaincode
 
-Payprotocol Token (PCL)
+Payprotocol Token (PCI)
 
 #
 

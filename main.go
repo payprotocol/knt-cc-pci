@@ -10,7 +10,7 @@ import (
 	"github.com/hyperledger/fabric/protos/peer"
 )
 
-var logger = shim.NewLogger("knt-pcl")
+var logger = shim.NewLogger("knt-pci")
 
 // Chaincode _
 type Chaincode struct {

@@ -8,7 +8,7 @@ import (
 )
 
 var token = map[string]string{
-	"code":           "PCL",
+	"code":           "PCI",
 	"decimal":        "2",
 	"max_supply":     "10000000000000", // 100 billion
 	"initial_supply": "200000000000",   // 2 million
