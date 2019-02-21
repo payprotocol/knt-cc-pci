@@ -10,8 +10,9 @@ import (
 var token = map[string]string{
 	"code":           "PCI",
 	"decimal":        "2",
-	"max_supply":     "10000000000000", // 100 billion
-	"initial_supply": "200000000000",   // 2 million
+	"max_supply":     "3941000000000",
+	"initial_supply": "394100000000",
+	"fee":            "transfer=0.1,10000;pay=-0.2",
 	// unnecessary fields
 	"description": "Payprotocol",
 	"website":     "https://payprotocol.io/",
