@@ -10,7 +10,7 @@ import (
 var token = map[string]string{
 	"code":           "PCI",
 	"decimal":        "8",
-	"max_supply":     "3941000000000000000",
+	"max_supply":     "394100000000000000",
 	"initial_supply": "394100000000000000",
 	"fee":            "transfer=0.1,10000000000;pay=-0.2",
 	// unnecessary fields
