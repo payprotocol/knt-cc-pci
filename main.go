@@ -88,6 +88,6 @@ func txBurn(stub shim.ChaincodeStubInterface, params []string) peer.Response {
 
 func main() {
 	if err := shim.Start(new(Chaincode)); err != nil {
-		logger.Criticalf("failed to start chaincode: %s", err)
+		logger.Criticalf("failed to start chaincode|%s", err)
 	}
 }
