@@ -5,6 +5,7 @@ package main
 import (
 	"encoding/json"
 	"math/big"
+	"os"
 
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 	"github.com/hyperledger/fabric/protos/peer"
@@ -18,6 +19,20 @@ type Chaincode struct {
 
 // Init implements shim.Chaincode interface.
 func (cc *Chaincode) Init(stub shim.ChaincodeStubInterface) peer.Response {
+	// deploy fee policy to token chaincode
+	var tokenCC string
+	if os.Getenv("DEV_CHANNEL_NAME") != "" { // dev mode
+		tokenCC = "kiesnet-cc-token"
+	} else {
+		tokenCC = "kiesnet-token"
+	}
+	args := [][]byte{[]byte("token/update"), []byte(token["code"]), []byte(token["fee"])}
+	res := stub.InvokeChaincode(tokenCC, args, "")
+	if res.GetStatus() != 200 {
+		// TODO return Success if kiesnet-cc-token is not instantiated OR token/update is not implemented.
+		return shim.Error(res.GetMessage())
+	}
+
 	return shim.Success(nil)
 }
 
