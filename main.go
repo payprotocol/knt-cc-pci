@@ -26,7 +26,7 @@ func (cc *Chaincode) Init(stub shim.ChaincodeStubInterface) peer.Response {
 	} else {
 		tokenCC = "kiesnet-token"
 	}
-	args := [][]byte{[]byte("token/update"), []byte(token["code"]), []byte(token["fee"])}
+	args := [][]byte{[]byte("token/update"), []byte(token["code"]), []byte(token["fee"]), []byte(token["target_address"])}
 	res := stub.InvokeChaincode(tokenCC, args, "")
 	if res.GetStatus() != 200 {
 		// TODO return Success if kiesnet-cc-token is not instantiated OR token/update is not implemented.
