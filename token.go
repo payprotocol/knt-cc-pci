@@ -12,7 +12,7 @@ var token = map[string]string{
 	"decimal":        "8",
 	"max_supply":     "394100000000000000",
 	"initial_supply": "394100000000000000",
-	"fee":            "transfer=0.1,10000000000;pay=0.2",
+	"fee":            "transfer=0.001,10000000000;pay=0.002",
 	"target_address": "",
 	// unnecessary fields
 	"description": "Payprotocol",
