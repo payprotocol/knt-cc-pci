@@ -13,8 +13,7 @@ var token = map[string]interface{}{
 	"max_supply":     "394100000000000000",
 	"initial_supply": "394100000000000000",
 	"fee":            "transfer=0.001,10000000000;pay=0.002",
-	// "target_address": "PCI01639F0B0A494B6040CE8B5B0DC4C56ACA7E78F6BAB02271AF", //PROD
-	// "target_address": "PCI012C0EDA8EFDFA3C56BE07311FB42A26E1725439C18C2E77FF", //local
+	"target_address": "PCI01639F0B0A494B6040CE8B5B0DC4C56ACA7E78F6BAB02271AF",
 	// unnecessary fields
 	"description": "Payprotocol",
 	"website":     "https://payprotocol.io/",
