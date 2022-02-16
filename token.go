@@ -24,7 +24,8 @@ var token = map[string]interface{}{
 var wrapBridge = map[string]string{
 	// "{{ext_code}}":"{{wrap_address}};{{ext_chain}};{{fee}}"
 	// eg. "wpci": "PCI0119043794E2DCB197059D2304E6AABB8501B32B8C6F116CB0;ETH;10000"
-	// "wpci": "PCI01B6AC0313B49F37934225D53720E71C2B63872C9AC2BAAABF;ETH;0",
+	// "wpci": "PCI01B6AC0313B49F37934225D53720E71C2B63872C9AC2BAAABF;ETH;0",	// testnet
+	"wpci": "PCI0147A0FFEA1F2A1FA5D08967D297D29CA495CEC34E5BDF11F3;ETH;0", // mainnet
 }
 
 func mintableAmount(totalSupply *big.Int, balance *big.Int, amount *big.Int) (*big.Int, error) {
