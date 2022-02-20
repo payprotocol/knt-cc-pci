@@ -14,7 +14,7 @@ var token = map[string]interface{}{
 	"initial_supply": "394100000000000000",
 	"fee":            "transfer=0.001,10000000000;pay=0.002",
 	// "target_address": "PCI01639F0B0A494B6040CE8B5B0DC4C56ACA7E78F6BAB02271AF", //PROD
-	// "target_address": "PCI012C0EDA8EFDFA3C56BE07311FB42A26E1725439C18C2E77FF", //local
+	"target_address": "PCI01D929227AEE7879337CED1AB316C17655E2BA109E7720BA40", //local
 	// unnecessary fields
 	"description": "Payprotocol",
 	"website":     "https://payprotocol.io/",
@@ -23,9 +23,9 @@ var token = map[string]interface{}{
 }
 
 var wrapBridge = map[string]string{
-	// "{{ext_code}}":"{{wrap_address}};{{ext_chain}};{{fee}}"
-	// eg. "wpci": "PCI0119043794E2DCB197059D2304E6AABB8501B32B8C6F116CB0;ETH;10000"
-	// "wpci": "PCI01B6AC0313B49F37934225D53720E71C2B63872C9AC2BAAABF;ETH;0",
+	// "{{ext_code}}":"{{wrap_address}};{{ext_chain}}"
+	// eg. "wpci": "PCI0119043794E2DCB197059D2304E6AABB8501B32B8C6F116CB0;ETH"
+	"wpci": "PCI01B8C378A079BD434B7B7AE383BB4D43FFDE7FFBE717B03637;ETH",
 }
 
 func mintableAmount(totalSupply *big.Int, balance *big.Int, amount *big.Int) (*big.Int, error) {
