@@ -12,14 +12,13 @@ var token = map[string]interface{}{
 	"decimal":        "8",
 	"max_supply":     "394100000000000000",
 	"initial_supply": "394100000000000000",
-	"fee":            "transfer=0.001,10000000000;pay=0.002",
+	"fee":            "transfer=0.001,10000000000;pay=0.002", // 0.001 = 0.1%, 10000000000 = 100PCI, 0.002 = 0.2%
 	// "target_address": ""	// testnet (genesis)
 	"target_address": "PCI01639F0B0A494B6040CE8B5B0DC4C56ACA7E78F6BAB02271AF", // mainnet
-	// unnecessary fields
+	"wrap_bridge":    wrapBridge,
+	// optional fields
 	"description": "Payprotocol",
 	"website":     "https://payprotocol.io/",
-	//wrap
-	"wrap_bridge": wrapBridge,
 }
 
 var wrapBridge = map[string]string{
